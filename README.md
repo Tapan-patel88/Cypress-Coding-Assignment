@@ -12,7 +12,7 @@ Test suite is developed using the Cypress framework and the JavaScript programmi
 3) Visual Studio Code (VS Code) is a popular source-code editor that is commonly used for working with Cypress for writing end-to-end tests. Please download and install from https://code.visualstudio.com/download
 4) Open VS Code and click on Terminal from top menu panel and then click on New Terminal. New Terminal will open in bottom and then type the below command to install Cypress,
 
-   <font color="yellow"> npm install cypress –save -dev </font>
+   <font color="yellow"> npm install cypress --save -dev </font>
 	
     Same command you can execute in command prompt to install Cypress.
 
@@ -39,8 +39,8 @@ To run tests in Cypress, you can follow these general steps:
 <font color="yellow">There is another way to execute test through VS Code terminal or through Command prompt,</font>
 1)	Go to VS code terminal and type command <font color="yellow">npx cypress run</font>, this command is used to execute Cypress tests in non-interactive mode, meaning it runs your tests without launching the Cypress Test Runner UI. It will execute all test files in headless mode and in by default browser i.e. <font color="yellow">Electron</font>.
 2)	To run specific test file use command <font color="yellow">npx cypress run  --spec cypress\e2e\coding-Test-Login.cy.js</font>.
-3)	To run specific test file and in specific browser use command <font color="yellow">npx cypress run –browser chrome --spec cypress\e2e\coding-Test-Login.cy.js</font>.
-4)	To run specific test file in specific browser and in headed mode use command <font color="yellow">npx cypress run –browser chrome --spec cypress\e2e\coding-Test-Login.cy.js --headed</font>.
+3)	To run specific test file and in specific browser use command <font color="yellow">npx cypress run --browser chrome --spec cypress\e2e\coding-Test-Login.cy.js</font>.
+4)	To run specific test file in specific browser and in headed mode use command <font color="yellow">npx cypress run --browser chrome --spec cypress\e2e\coding-Test-Login.cy.js --headed</font>.
 
 ## Brief Description of Automation framework and file/folder:
 

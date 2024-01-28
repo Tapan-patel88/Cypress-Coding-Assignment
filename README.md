@@ -27,16 +27,23 @@ Test suite is developed using the Cypress framework and the JavaScript programmi
 1)	<font color="yellow">Open Folder:</font> In VS Code, click on <font color="yellow">File</font> in the top-left corner. Select "Open Folder..." from the dropdown menu.
 2)	<font color="yellow">Navigate to Cloned Project:</font> Navigate to the directory where you have cloned the Cypress project. Select the folder that contains your Cypress project files.
 3)	<font color="yellow">Open the Project:</font> Click the <font color="yellow">Open </font> button in the file dialog. This will open your Cypress project in VS Code.
-To run tests in Cypress, you can follow these general steps:
-4)	Go to VS code terminal and type command <font color="yellow">npx cypress open</font>, this command is used to launch the Cypress Test Runner in interactive mode. When you run this command, Cypress opens a graphical user interface (GUI) that provides a convenient way to view, manage, and run your Cypress tests.
-5)	Once you will execute above command a Cypress Test Runner will open and then select <font color="yellow">E2E Testing</font>.
-6)	After clicking on <font color="yellow">E2E Testing</font> you must choose your preferred browser for E2E testing, it will show options Chrome, Firefox, Edge, and Electron. 
+
+## To run tests in Cypress, you can follow these general steps:
+
+1) Install below dependencies by typing below command in your VS Code terminal,
+   - npm install --save -dev cypress-file-upload
+   - npm install -D cypress-xpath
+   - npm i --save-dev cypress-mochawesome-reporter
+  
+2)	Go to VS code terminal and type command <font color="yellow">npx cypress open</font>, this command is used to launch the Cypress Test Runner in interactive mode. When you run this command, Cypress opens a graphical user interface (GUI) that provides a convenient way to view, manage, and run your Cypress tests.
+3)	Once you will execute above command a Cypress Test Runner will open and then select <font color="yellow">E2E Testing</font>.
+4)	After clicking on <font color="yellow">E2E Testing</font> you must choose your preferred browser for E2E testing, it will show options Chrome, Firefox, Edge, and Electron. 
       
     - <font color="yellow">Note:</font> Cypress currently support Chrome, Firefox, and Edge browser so to execute your test script that browser needs to be installed in your system. Electron is a by default browser provided by cypress.
-7)	After selecting browser click on <font color="yellow">Start E2E Testing</font> button and selected browser will open automatically and it will display all <font color="yellow">spec files</font> which are created under E2E folder.
-8)	Select the spec file you want to execute, and test will start executing. As tests run, the Test Runner displays the real-time execution of your tests in an actual browser. You can see each step being executed, making it easier to identify any issues.
+5)	After selecting browser click on <font color="yellow">Start E2E Testing</font> button and selected browser will open automatically and it will display all <font color="yellow">spec files</font> which are created under E2E folder.
+6)	Select the spec file you want to execute, and test will start executing. As tests run, the Test Runner displays the real-time execution of your tests in an actual browser. You can see each step being executed, making it easier to identify any issues.
 
-<font color="yellow">There is another way to execute test through VS Code terminal or through Command prompt,</font>
+## There is another way to execute test through VS Code terminal or Command prompt
 1)	Go to VS code terminal and type command <font color="yellow">npx cypress run</font>, this command is used to execute Cypress tests in non-interactive mode, meaning it runs your tests without launching the Cypress Test Runner UI. It will execute all test files in headless mode and in by default browser i.e. <font color="yellow">Electron</font>.
 2)	To run specific test file use command <font color="yellow">npx cypress run  --spec cypress\e2e\coding-Test-Login.cy.js</font>.
 3)	To run specific test file and in specific browser use command <font color="yellow">npx cypress run --browser chrome --spec cypress\e2e\coding-Test-Login.cy.js</font>.
@@ -74,7 +81,7 @@ Test automation scripts are developed using the Page Object Model (POM) design p
 
 - I have integrated Mocha HTML report with Cypress framework which will generate HTML report after every test run, and it will attach screenshot in the report whenever the test case fails.
 
-- For logs I have used cypress in-build command <font color="yellow">cy.log()</font> and also created a custom command to add Additional Test Context which can be used for debugging.Below custom command is included in commands.js
+- For logs I have used cypress in-build command <font color="yellow">cy.log()</font> and also created a custom command to add Additional Test Context in the HTML report which can help for debugging. Below addContext() custom command is added in commands.js
    - <font color="yellow"> Cypress.Commands.add('addContext', (context)=>{
     cy.once('test:after:run', (test) => addContext({ test }, context))
 }) </font>
